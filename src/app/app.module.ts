@@ -24,7 +24,6 @@ import { ConveniosContentPage } from '../pages/convenios/convenios';
 import { SobreDaiPage } from '../pages/sobre-dai/sobre-dai';
 import { SobrePage } from '../pages/sobre/sobre';
 import { PerfilPage } from '../pages/perfil/perfil';
-import { CadastrarPage } from '../pages/cadastrar/cadastrar';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderCadastro } from '../providers/provider-cadastro';
@@ -36,7 +35,6 @@ var firebaseConfig = {
   storageBucket: "appdai-beta.appspot.com",
   messagingSenderId: "562100545330"
 };
-var database = firebase.database();
 
 @NgModule({
   declarations: [
@@ -56,8 +54,7 @@ var database = firebase.database();
     ConveniosContentPage,
     SobreDaiPage,
     SobrePage,
-    PerfilPage,
-    CadastrarPage
+    PerfilPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'})
@@ -81,14 +78,12 @@ var database = firebase.database();
     ConveniosContentPage,
     SobreDaiPage,
     SobrePage,
-    PerfilPage,
-    CadastrarPage
+    PerfilPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ProviderLogin,
-    ProviderCadastro,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
@@ -97,6 +92,5 @@ var database = firebase.database();
 export class AppModule {
   constructor(){
     firebase.initializeApp(firebaseConfig);
-    AngularFireModule.initializeApp(firebaseConfig)
   }
 }

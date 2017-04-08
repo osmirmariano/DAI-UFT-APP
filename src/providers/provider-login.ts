@@ -1,11 +1,10 @@
 
-import { Injectable, EventEmitter, ErrorHandler } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Http } from '@angular/http';
 import { NgZone } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Credencial } from '../model/credencial';
 import { AlertController } from 'ionic-angular';
-import { Facebook } from 'ionic-native';
 
 import firebase from 'firebase';
 
