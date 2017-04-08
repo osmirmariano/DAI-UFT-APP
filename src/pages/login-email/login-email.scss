@@ -1,0 +1,24 @@
+page-login-email {
+    .logoLogin{
+        width: 25%;
+        height: 25%;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .tituloLogin{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 1.8em;
+        color: black;
+        text-align: center;
+    }
+    
+    .subtituloDiretoria{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1em;
+        color: grey;
+        text-align: center;
+    }
+}

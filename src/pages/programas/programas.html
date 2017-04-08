@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Programas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content floating>
+    <br/>
+    <button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)">
+	      <img class="imagemNoticia" [src]="item.imageTitulo"/>
+        <h6 class="teste">{{item.title}}</h6>
+   	</button>
+
+    <ion-fab top right edge>
+        <button ion-fab color="amarelo" mini>
+            <ion-icon name="add"></ion-icon>
+        </button>
+        <ion-fab-list>
+            <button ion-fab (click)="chamadaHome()">
+                <ion-icon name="md-home"></ion-icon>
+                <div class="label">Início</div>
+            </button>
+            <button ion-fab>
+                <ion-icon name="md-search"></ion-icon>
+                <div class="label">Pesquisar</div>
+            </button>
+        </ion-fab-list>
+  	</ion-fab>
+</ion-content>
+

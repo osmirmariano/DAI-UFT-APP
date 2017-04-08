@@ -1,0 +1,55 @@
+
+<ion-header>
+  
+  <ion-navbar>
+    <ion-title>Login com E-mail</ion-title>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card-header>
+		<br/>
+		<img class="logoLogin" src="assets/img/logo.png"/>
+		<h1 class="tituloLogin"> APP DAI-UFT</h1>
+	</ion-card-header>
+
+  <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>
+            E-mail
+          </ion-label>
+          <ion-input name="email" required="requerid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="credencial.email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>
+            Senha
+          </ion-label>
+          <ion-input type="password" name="senha" [(ngModel)]="credencial.senha"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button outline  block color="primary" (click)="loginComCredencial()">
+          Entrar
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+				<ion-col>
+          <a (click)="recuperarSenha()">
+						Esqueci minha senha!
+					</a>
+				</ion-col>
+			</ion-row>
+</ion-content>

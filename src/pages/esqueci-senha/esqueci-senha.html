@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Recuperação de senha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h5>Por favor, insira seu e-mail</h5>
+  <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>
+            E-mail
+          </ion-label>
+          <ion-input type="email" name="email" required [(ngModel)]="credencial.email"></ion-input>
+        </ion-item>
+      </ion-col>
+  </ion-row>
+
+  <!--<ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>
+            Senha
+          </ion-label>
+          <ion-input type="password" name="senha" required></ion-input>
+        </ion-item>
+      </ion-col>
+  </ion-row>
+
+   <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>
+            Confirmar senha
+          </ion-label>
+          <ion-input type="password" name="senha" required></ion-input>
+        </ion-item>
+      </ion-col>
+  </ion-row>-->
+
+  <ion-row>
+      <ion-col>
+        <button ion-button outline block color="primary">
+          Recuperar
+        </button>
+      </ion-col>
+  </ion-row>
+</ion-content>

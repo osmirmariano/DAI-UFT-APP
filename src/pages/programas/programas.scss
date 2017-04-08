@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+page-programas {
+	ion-fab {
+        button {
+            box-shadow: 0 4px 10px #6b6b6b;
+        }
+
+        ion-fab-list button[ion-fab] {
+            text-align: center;
+            overflow: visible;
+
+            .label {
+                position: absolute;
+                right: 48px;
+                background: rgba(248, 248, 248, 1);
+				color: black;
+                height: 24px;
+                line-height: 16px;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                margin-top: 8px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .button-inner {
+            overflow: visible;
+        }
+    }
+	
+	
+	.titulo{
+		font-family: 'Roboto', sans-serif;
+		font-weight: 900;
+		margin: 5%;
+		text-align: left;
+		color: #387ef5;
+	}
+
+	.descricao{
+		font-family: 'Roboto', sans-serif;
+		margin: 5%;
+		font-size: 1.4em;
+		text-indent: 1.5em;
+		text-align: justify;
+		line-height: 1.7em;
+	}
+}
+
+	
+	.imagemNoticia{
+		width: 30%;
+		height: 30%;
+	}
+	
+	.teste{
+		position: relative;
+		float: right;
+		padding-top: 10%;
+		color: gray;
+	}
+	
+	

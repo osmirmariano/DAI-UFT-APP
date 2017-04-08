@@ -1,0 +1,30 @@
+page-sobre-dai {
+    .descricaoDai{
+        font-size: 1.4em;
+        color: black;
+        text-align: center;		
+		line-height: 1.7em;
+        margin-top: 15%;
+    }
+
+    .btnVersion{
+        text-align: center;
+    }
+
+    .btnVersao{
+        float: right;
+    }
+
+    .linha{
+        position: absolute;
+        margin-left: -5%;
+    }
+
+    .contato{
+        font-size: 1.2em;
+        color: gray;
+        font-style: italic;
+        font-weight: bolder;
+        margin-bottom: -2%;
+    }
+}

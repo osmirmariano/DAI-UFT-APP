@@ -1,0 +1,77 @@
+<ion-slides pager class="page-slide-home" [options]="{pager:true}" #mySlides>
+  <ion-slide class="homeSlide">
+    <ion-fab top right>
+      <button ion-button clear color="corPadrao" class="botao" (click)="iniciarPagina()">Pular</button>
+    </ion-fab>
+
+    <img src="assets/img/icon1.png" class="logo" />
+
+    <h2 class="titulo">INFORMAÇÃO</h2>
+    <h4 class="subtitulo">Desenvolvido especial para deixar você informado sobre a DAI-UFT</h4>
+
+    <ion-fab center>
+      <button ion-fab color="corPadrao" (click)="proxSlide1()">
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button>
+    </ion-fab>
+
+  </ion-slide>
+
+  <ion-slide class="homeSlide">
+    <ion-fab top right>
+      <button ion-button clear color="corPadrao" class="botao" (click)="iniciarPagina()">Pular</button>
+    </ion-fab>
+
+    <img src="assets/img/icon2.png" class="logo" />
+    <h2 class="titulo">CHAT ONLINE</h2>
+    <h4 class="subtitulo">Converse online com uns dos servidores para sanar suas dúvidas</h4>
+
+    <ion-fab center>
+      <button ion-fab color="corPadrao" (click)="proxSlide2()">
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button>
+    </ion-fab>
+
+  </ion-slide>
+
+  <ion-slide class="homeSlide">
+    <ion-fab top right>
+      <button ion-button clear color="corPadrao" class="botao" (click)="iniciarPagina()">Pular</button>
+    </ion-fab>
+
+    <img src="assets/img/icon3.png" class="logo" />
+    <h2 class="titulo">DÚVIDAS, NÃO MAIS</h2>
+    <h4 class="subtitulo">Você está com dúvidas? Então acesse o nosso App</h4>
+    
+    <ion-fab center>
+      <button ion-fab color="corPadrao" (click)="proxSlide3()">
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button>
+    </ion-fab>
+
+  </ion-slide>
+
+  <ion-slide class="homeSlide">
+    <ion-fab top right>
+      <button ion-button clear color="corPadrao" class="botao" (click)="iniciarPagina()">Pular</button>
+    </ion-fab>
+
+    <img src="assets/img/icon4.png" class="logo" />
+    <h2 class="titulo">DAI - UFT</h2>
+    <h4 class="subtitulo">Diretoria de Assuntos Internacionais da UFT</h4>
+
+    <ion-fab center>
+      <button ion-fab color="corPadrao" (click)="proxSlide4()">
+				<ion-icon name="arrow-forward"></ion-icon>
+			</button>
+    </ion-fab>
+
+  </ion-slide>
+
+  <ion-slide class="homeSlide">
+    <h2 class="titulo">Acesse essa nova ferramenta</h2>
+    <button ion-button large round outline color="corPadrao" (click)="iniciarPagina()">
+	        	Começar
+	      	</button>
+  </ion-slide>
+</ion-slides>

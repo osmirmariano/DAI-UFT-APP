@@ -1,0 +1,57 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	Registrar-se
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<ion-item>
+					<ion-label floating>
+						Nome:
+					</ion-label>
+					<ion-input  name="nome" required x-moz-errormessage="Nome de usário é obrigatório preencher"  [(ngModel)]="credencial.nome"> </ion-input>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row>
+			<ion-col>
+				<ion-item>
+					<ion-label floating>
+						E-mail:
+					</ion-label>
+					<ion-input  name="email" required x-moz-errormessage="email é obrigatório preencher" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Erro: exemplo de email válido 'exemplo@exemplo.com'." [(ngModel)]="credencial.email"> </ion-input>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<ion-item>
+					<ion-label floating>
+						Senha:
+					</ion-label>
+					<ion-input  name="senha" #senha required x-moz-errormessage="senha obrigatória preencher" type="password" [(ngModel)]="credencial.senha"> </ion-input>
+				</ion-item>
+			</ion-col>
+		</ion-row>
+
+		<ion-row>
+			<ion-col>
+				<button ion-button full (click)="doRegister()">
+					Registrar
+				</button>
+			</ion-col>
+		</ion-row>
+
+	</ion-grid>
+</ion-content>
+

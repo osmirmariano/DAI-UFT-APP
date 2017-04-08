@@ -1,0 +1,49 @@
+<ion-header>
+  	<ion-navbar>
+	    <button ion-button menuToggle>
+	      	<ion-icon name="menu"></ion-icon>
+	    </button>
+    	<ion-title>DAI-UFT</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button class="btnVersao" ion-button ion-button icon-right item-right clear (click)="chamadaVersao()">
+    VERSÃO
+  </button>
+
+  <p class="descricaoDai">
+    A Diretoria Assuntos Internacionais (DAI) atua na elaboração de acordos internacionais mantidos pela UFT e na orientação de alunos e professores que buscam informações sobre opções e procedimentos necessários para realizar estudos no exterior. Entre as suas funções está a de divulgar para a comunidade universitária da UFT as oportunidades de intercâmbio acadêmico/estudos no exterior.
+  </p>
+
+  
+  <h6 class="contato">Contatos:</h6>
+	<ion-grid class="linha">   
+      <ion-row >
+        <ion-col width-25>
+          <button ion-button clear block (click)="endereco()">
+            <ion-icon name="md-pin"></ion-icon>
+          </button>
+        </ion-col>
+
+        <ion-col width-25>
+          <button ion-button clear block (click)="telefone()">
+            <ion-icon name="md-phone-portrait"></ion-icon>
+          </button>
+        </ion-col>
+
+        <ion-col width-25>
+          <button ion-button clear block (click)="launch('http://ww2.uft.edu.br/internacional')">
+            <ion-icon name="md-desktop"></ion-icon>
+          </button>
+        </ion-col>
+
+        <ion-col width-25>
+          <button ion-button clear block (click)="launch('https://www.facebook.com/diretoriadeassuntosinternacionaisuft')">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+	</ion-grid>
+</ion-content>
+

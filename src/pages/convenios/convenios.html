@@ -1,0 +1,80 @@
+<ion-header>
+  	<ion-navbar>
+	    <button ion-button menuToggle>
+	      	<ion-icon name="menu"></ion-icon>
+	    </button>
+    	<ion-title>Convênios</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+<ion-content class="convenios">
+	<ion-list>
+		<a ion-item (click)="openModal({charNum: 0})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/bolivia.jpg">
+				<div class="card-title">BOLÍVIA</div>
+			</ion-card>
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 1})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/colombia.jpg">
+				<div class="card-title">CHILE</div>
+			</ion-card>
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 2})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/espanha.jpg">
+				<div class="card-title">ESPANHA</div>
+			</ion-card>
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 3})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/estadosUnidos.jpg">
+				<div class="card-title">ESTADOS UNIDOS</div>
+			</ion-card>	
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 4})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/italia.jpg">
+				<div class="card-title">ITÁLIA</div>
+			</ion-card>
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 5})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/japao.jpg">
+				<div class="card-title">JAPÃO</div>	
+			</ion-card>
+		</a>
+
+		<a ion-item (click)="openModal({charNum: 6})">
+			<ion-card style="width: 100%; margin: 0;">
+				<img src="assets/img/portugal.jpg">
+				<div class="card-title">PORTUGAL</div>
+			</ion-card>
+		</a>
+	</ion-list>
+
+
+	<ion-fab top right edge>
+		<button ion-fab color="amarelo" mini>
+			<ion-icon name="add"></ion-icon>
+		</button>
+		<ion-fab-list>
+			<button ion-fab (click)="chamadaHome()">
+				<ion-icon name="md-home"></ion-icon>
+				<div class="label">Início</div>
+			</button>
+
+			<button ion-fab>
+				<ion-icon name="md-search"></ion-icon>
+				<div class="label">Pesquisar</div>
+			</button>
+		</ion-fab-list>
+	</ion-fab>
+
+</ion-content>
