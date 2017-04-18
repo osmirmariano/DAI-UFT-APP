@@ -26,6 +26,7 @@ import { SobrePage } from '../pages/sobre/sobre';
 import { PerfilPage } from '../pages/perfil/perfil';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
+import { ProviderDados } from '../providers/provider-dados';
 import { ProviderCadastro } from '../providers/provider-cadastro';
 
 var firebaseConfig = {
@@ -84,6 +85,7 @@ var firebaseConfig = {
     StatusBar,
     SplashScreen,
     ProviderLogin,
+    ProviderDados,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
