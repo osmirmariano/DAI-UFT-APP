@@ -27,9 +27,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderDados } from '../providers/provider-dados';
-import { ProviderCadastro } from '../providers/provider-cadastro';
 
-var firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyCT5QhqGe8tXBhcCwXE27VUoWyngERdJYM",
   authDomain: "appdai-beta.firebaseapp.com",
   databaseURL: "https://appdai-beta.firebaseio.com",
@@ -58,8 +57,8 @@ var firebaseConfig = {
     PerfilPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp, {tabsPlacement: 'top'})
-
+    IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -86,7 +85,6 @@ var firebaseConfig = {
     SplashScreen,
     ProviderLogin,
     ProviderDados,
-
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

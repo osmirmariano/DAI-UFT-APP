@@ -40,11 +40,9 @@ export class MyApp {
       this.zone.run(() => {
         if (user == null) {
           this.rootPage = HomeSlidePage;
-          console.log(user);
           unsubscribe();
         } else { 
           this.rootPage = TabsPage; 
-          console.log(user);
           unsubscribe();
         }
       });     
