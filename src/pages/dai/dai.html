@@ -13,11 +13,55 @@
   	</ion-navbar>
 </ion-header>
 
+
+
+
+
 <ion-content padding>
-	<ion-list>
-		<ion-item class="text" *ngFor="let noticia of noticias | async">
-			{{noticia.titulo}}
+
+	<ion-slides pager style="height: 400px; width: 100%;">
+		<ion-slide class="teste" style="background: url(build/img/imagem1.jpg) no-repeat;">
+	    	<h2>Oportunidade de Intercâmbio</h2>
+	    	<p>Está aberta as inscrições para bolsas de doutorado na Espanha.</p>
+	  	</ion-slide>
+
+	  	<ion-slide style="background: url(build/img/imagem1.jpg) no-repeat center fixed;">
+	    	<h2>Lorem Ipsum.</h2>
+	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
+	  	</ion-slide>
+
+	  	<ion-slide style="background: url(build/img/imagem1.jpg) no-repeat center fixed; ">
+	    	<h2>Lorem Ipsum</h2>
+	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
+	  	</ion-slide>
+
+	  	<button fab fab-right fab-top>
+			<ion-icon name="arrow-down"></ion-icon>
+		</button>
+	</ion-slides>
+
+
+
+
+	<ion-card  class="text" *ngFor="let noticia of noticias | async">
+		<img src=""/>
+		<ion-card-content>
+			<ion-card-title>
+				{{noticia.titulo}}
+			</ion-card-title>
+			<p>
 			{{noticia.descricao}}
-		</ion-item>
-	</ion-list>
+			</p>
+		</ion-card-content>
+	</ion-card>
+
+	<!--<ion-card class="text" *ngFor="let noticia of noticias | async">
+		<ion-card-header>
+			{{noticia.titulo}}
+		</ion-card-header>
+		<ion-card-content>
+			{{noticia.descricao}}
+		</ion-card-content>
+	</ion-card>-->
+
 </ion-content>
