@@ -12,6 +12,37 @@
   	</ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content no-padding>
+	<ion-list>
+		<ion-item *ngFor="let item of firelist | async">
+			<ion-avatar item-left>
+				<img src="{{item.img}}" />
+			</ion-avatar>
+			<h2 class="chat-username"></h2>
+			<div class="balao">
+				<h3 class="chatText">{{item.chat_text}}</h3>
+			</div>
+		</ion-item>
+	</ion-list>
 </ion-content>
+
+<ion-footer class="rodape">
+	<form #f="ngForm">
+		<ion-grid>
+			<ion-row>
+				<ion-col width-80 class="mensagemChat">
+					<ion-input class="chat-text" [(ngModel)]="chat" name="chatText" required placeholder="Mensagem..."></ion-input>
+				</ion-col>
+
+				<ion-col width-20 center class="mensagemChatMensagem">
+					<ion-fab bottom right edge>
+						<button  ion-fab (click)="chatSend(f.value, f.valid)" full [disabled]="f.valid === false" icon-left clear item-right>
+							 <ion-icon name="send"></ion-icon>
+						</button>
+					</ion-fab>
+				</ion-col>
+
+			</ion-row>
+		</ion-grid>
+	</form>
+</ion-footer>

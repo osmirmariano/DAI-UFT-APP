@@ -4,7 +4,7 @@
 	      	<ion-icon name="menu"></ion-icon>
 	    </button>
 		<ion-buttons start style="margin-right: 4%;">
-			{{emailUser}}
+			<!--{{emailUser}}-->
 			<button ion-button clear block (click)="sair()">
 				<ion-icon ios="ios-power" md="md-power"></ion-icon>
 			</button>
@@ -13,24 +13,19 @@
   	</ion-navbar>
 </ion-header>
 
-
-
-
-
-<ion-content padding>
-
+<ion-content>
 	<ion-slides pager style="height: 400px; width: 100%;">
-		<ion-slide class="teste" style="background: url(build/img/imagem1.jpg) no-repeat;">
+		<ion-slide class="teste" style="background: url(assets/img/12.jpg) no-repeat;">
 	    	<h2>Oportunidade de Intercâmbio</h2>
 	    	<p>Está aberta as inscrições para bolsas de doutorado na Espanha.</p>
 	  	</ion-slide>
 
-	  	<ion-slide style="background: url(build/img/imagem1.jpg) no-repeat center fixed;">
+	  	<ion-slide style="background: url(assets/img/2.jpg) no-repeat center fixed;">
 	    	<h2>Lorem Ipsum.</h2>
 	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
 	  	</ion-slide>
 
-	  	<ion-slide style="background: url(build/img/imagem1.jpg) no-repeat center fixed; ">
+	  	<ion-slide style="background: url(assets/img/3.jpg) no-repeat center fixed; ">
 	    	<h2>Lorem Ipsum</h2>
 	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
 	  	</ion-slide>
@@ -39,18 +34,16 @@
 			<ion-icon name="arrow-down"></ion-icon>
 		</button>
 	</ion-slides>
-
-
-
+	
+	<hr/>
 
 	<ion-card  class="text" *ngFor="let noticia of noticias | async">
-		<img src=""/>
 		<ion-card-content>
-			<ion-card-title>
+			<ion-card-title class="tituloFormato">
 				{{noticia.titulo}}
 			</ion-card-title>
-			<p>
-			{{noticia.descricao}}
+			<p class="resumoFormato">
+				{{noticia.resumo}}
 			</p>
 		</ion-card-content>
 	</ion-card>

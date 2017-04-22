@@ -9,7 +9,7 @@ import { ProgramasPage } from '../pages/programas/programas';
 import { ConveniosPage } from '../pages/convenios/convenios';
 import { SobreDaiPage } from '../pages/sobre-dai/sobre-dai';
 import { PerfilPage } from '../pages/perfil/perfil';
-
+// import { SocketService } from '../providers/socket-service';
 import firebase from 'firebase';
 
 @Component({
@@ -24,16 +24,24 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   pages: Array<{title: string, component: any}>;
 
+
+
   constructor(
-    platform: Platform, private statusBar: StatusBar, 
+    platform: Platform, 
+    private statusBar: StatusBar, 
     private splashScreen: SplashScreen) {
     
     this.zone = new NgZone({});
-    
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+
+    //para o socket
+    // this.socket.initialize();
+    //  this.socket.socketService.subscribe(event => {
+    //      console.log('Mensagem enviada para o servidor... ', event);
+    //  });
 
     this.zone = new NgZone({});
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {

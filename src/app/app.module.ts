@@ -27,6 +27,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderDados } from '../providers/provider-dados';
+// import { SocketService } from '../providers/socket-service';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCT5QhqGe8tXBhcCwXE27VUoWyngERdJYM",
@@ -85,6 +86,7 @@ export const firebaseConfig = {
     SplashScreen,
     ProviderLogin,
     ProviderDados,
+    // SocketService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

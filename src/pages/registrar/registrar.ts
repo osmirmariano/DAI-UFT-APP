@@ -36,7 +36,7 @@ export class RegistrarPage {
 	doRegister(){
 		var user = firebase.auth().currentUser;
 		this.providerLogin.registrarUsuario(this.credencial);
-		if(this.credencial.email == null || this.credencial.nome == null || this.credencial.senha == null){
+		if(this.credencial.email == null || this.credencial.senha == null){
 			let alert = this.alertCtrl.create({
 				title: 'Erro:',
 				message: 'Todos os campos são obrigatórios. por favor, preencha',

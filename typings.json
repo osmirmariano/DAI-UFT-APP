@@ -1,5 +1,6 @@
 {
   "globalDependencies": {
-    "firebase": "file:node_modules/firebase/firebase.d.ts"
+    "firebase": "file:node_modules/firebase/firebase.d.ts",
+    "socket.io-client": "registry:dt/socket.io-client#1.4.4+20161116080703"
   }
 }
