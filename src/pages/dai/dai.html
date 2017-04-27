@@ -4,7 +4,6 @@
 	      	<ion-icon name="menu"></ion-icon>
 	    </button>
 		<ion-buttons start style="margin-right: 4%;">
-			<!--{{emailUser}}-->
 			<button ion-button clear block (click)="sair()">
 				<ion-icon ios="ios-power" md="md-power"></ion-icon>
 			</button>
@@ -14,31 +13,11 @@
 </ion-header>
 
 <ion-content>
-	<ion-slides pager style="height: 400px; width: 100%;">
-		<ion-slide class="teste" style="background: url(assets/img/12.jpg) no-repeat;">
-	    	<h2>Oportunidade de Intercâmbio</h2>
-	    	<p>Está aberta as inscrições para bolsas de doutorado na Espanha.</p>
-	  	</ion-slide>
 
-	  	<ion-slide style="background: url(assets/img/2.jpg) no-repeat center fixed;">
-	    	<h2>Lorem Ipsum.</h2>
-	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
-	  	</ion-slide>
-
-	  	<ion-slide style="background: url(assets/img/3.jpg) no-repeat center fixed; ">
-	    	<h2>Lorem Ipsum</h2>
-	    	<p>É simplesmente uma simulação de texto da indústria tipográfica e de impressos.</p>
-	  	</ion-slide>
-
-	  	<button fab fab-right fab-top>
-			<ion-icon name="arrow-down"></ion-icon>
-		</button>
-	</ion-slides>
-	
 	<hr/>
 
 	<ion-card  class="text" *ngFor="let noticia of noticias | async">
-		<ion-card-content>
+		<ion-card-content (click)="openModal()">
 			<ion-card-title class="tituloFormato">
 				{{noticia.titulo}}
 			</ion-card-title>
@@ -47,14 +26,4 @@
 			</p>
 		</ion-card-content>
 	</ion-card>
-
-	<!--<ion-card class="text" *ngFor="let noticia of noticias | async">
-		<ion-card-header>
-			{{noticia.titulo}}
-		</ion-card-header>
-		<ion-card-content>
-			{{noticia.descricao}}
-		</ion-card-content>
-	</ion-card>-->
-
 </ion-content>

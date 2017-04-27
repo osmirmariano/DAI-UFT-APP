@@ -1,6 +1,7 @@
 /*Declarações Nativas Ionic 2*/
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
 import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -9,6 +10,7 @@ import { AngularFireModule } from 'angularfire2';
 import firebase from 'firebase';
 /*Declarações de imports de paginas*/
 import { DaiPage } from '../pages/dai/dai';
+import { ModalContentPage } from '../pages/dai/dai';
 import { ChatPage } from '../pages/chat/chat';
 import { IsfPage } from '../pages/isf/isf';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -24,6 +26,7 @@ import { ConveniosContentPage } from '../pages/convenios/convenios';
 import { SobreDaiPage } from '../pages/sobre-dai/sobre-dai';
 import { SobrePage } from '../pages/sobre/sobre';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { NoticiasPage } from '../pages/noticias/noticias';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderDados } from '../providers/provider-dados';
@@ -55,7 +58,9 @@ export const firebaseConfig = {
     ConveniosContentPage,
     SobreDaiPage,
     SobrePage,
-    PerfilPage
+    PerfilPage,
+    NoticiasPage,
+    ModalContentPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
@@ -79,7 +84,9 @@ export const firebaseConfig = {
     ConveniosContentPage,
     SobreDaiPage,
     SobrePage,
-    PerfilPage
+    PerfilPage,
+    NoticiasPage,
+    ModalContentPage
   ],
   providers: [
     StatusBar,

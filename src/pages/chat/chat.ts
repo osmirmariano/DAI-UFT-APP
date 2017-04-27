@@ -42,7 +42,6 @@ export class ChatPage {
     this.chat = '';
   }
 
-
   sair(){
 	    this.providerLogin.sair();
       this.nav.setRoot(LoginPage)

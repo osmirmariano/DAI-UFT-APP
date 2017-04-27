@@ -37,6 +37,12 @@ export class MyApp {
       splashScreen.hide();
     });
 
+    //window["plugins"].OneSignal.startInit("2e83a1c1-1c42-4026-b6c0-5fdc070e706d",
+      //    "562100545330")
+       //   .handleNotificationOpened(funcaoRetorno)
+        //  .endInit();
+    //});
+
     //para o socket
     // this.socket.initialize();
     //  this.socket.socketService.subscribe(event => {
