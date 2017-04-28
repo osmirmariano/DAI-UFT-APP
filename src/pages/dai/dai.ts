@@ -1,16 +1,63 @@
 import { Component, NgZone  } from '@angular/core';
-import { NavController, NavParams, Nav, ModalController, ViewController, Alert } from 'ionic-angular';
+import { NavController, NavParams, Nav, ViewController } from 'ionic-angular';
 import { ProviderLogin } from '../../providers/provider-login';
 import { LoginPage } from '../login/login';
-import { NoticasPage } from '../pages/noticias/noticias';
+import { NoticiasPage } from '../pages/noticias/noticias';
 import firebase from 'firebase';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
+@Component({
+  template: 'dai-noticias.html'
+})
+
+export class VisualizaPage {
+  noticias;
+  constructor(
+    private nav:NavController, 
+    private viewCtrl:ViewController,
+    public params: NavParams) {
+      this.noticias = params.data.noticias;     
+    }
+}
 
 @Component({
-  selector: 'page-dai',
-  templateUrl: 'dai.html'
+  template: `
+    <ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+          </button>
+        <ion-buttons start style="margin-right: 4%;">
+          <button ion-button clear block (click)="sair()">
+            <ion-icon ios="ios-power" md="md-power"></ion-icon>
+          </button>
+        </ion-buttons>
+          <ion-title>DAI</ion-title>
+        </ion-navbar>
+    </ion-header>
+
+    <ion-content>
+      <hr/>
+      <ion-card  class="text" *ngFor="let noticia of noticias | async" (click)="VisualizaPage(noticia)">
+        <ion-card-content>
+          <ion-card-title class="tituloFormato">
+            {{noticia.titulo}}
+          </ion-card-title>
+          <p class="resumoFormato">
+            {{noticia.resumo}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+
+  `
 })
+
+
+//@Component({
+  //selector: 'page-dai',
+  //templateUrl: 'dai.html'
+//})
 
 export class DaiPage {
   noticias: FirebaseListObservable<any>;
@@ -21,51 +68,23 @@ export class DaiPage {
     public navParams: NavParams, 
     public providerLogin: ProviderLogin,
     public nav: Nav,
-    public af: AngularFire,
-    public modalCtrl: ModalController) {
+    public af: AngularFire) {
       this.noticias = af.database.list('noticias/');
 
       var user = firebase.auth().currentUser;
       if(user != null){
         this.emailUser = user.displayName;
       }
+
     }
 
-    openModal() {
-      console.log('erro');
-      let myModal = this.modalCtrl.create(ModalContentPage);
-      myModal.present();
+    abrirNoticiasPage(noticias) {
+      this.nav.push(noticias);
     }
 
     sair(){
         this.providerLogin.sair();
-        this.nav.setRoot(LoginPage)
+        this.nav.setRoot(LoginPage);
     }
 }
 
-@Component({
-  template: `
-  <ion-toolbar>
-        <ion-title>{{noticias.title}}</ion-title>
-        <ion-buttons end>
-        <button nav-pop>
-            <ion-icon [name]="'close'"></ion-icon>
-        </button>
-    </ion-buttons>
-    </ion-toolbar>
-  <ion-content padding>
-    
-    
-  </ion-content>
-`
-})
-
-export class ModalContentPage {
-  constructor(
-    private nav:NavController, 
-    private viewCtrl:ViewController,
-    public alert: Alert) {
-
-    }
-    
-}

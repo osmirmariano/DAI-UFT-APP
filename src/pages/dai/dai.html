@@ -13,11 +13,9 @@
 </ion-header>
 
 <ion-content>
-
 	<hr/>
-
-	<ion-card  class="text" *ngFor="let noticia of noticias | async">
-		<ion-card-content (click)="openModal()">
+	<ion-card  class="text" *ngFor="let noticia of noticias | async" (click)="abrirNoticiasPage(noticia)">
+		<ion-card-content>
 			<ion-card-title class="tituloFormato">
 				{{noticia.titulo}}
 			</ion-card-title>

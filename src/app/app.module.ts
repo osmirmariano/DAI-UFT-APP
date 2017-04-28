@@ -10,7 +10,7 @@ import { AngularFireModule } from 'angularfire2';
 import firebase from 'firebase';
 /*Declarações de imports de paginas*/
 import { DaiPage } from '../pages/dai/dai';
-import { ModalContentPage } from '../pages/dai/dai';
+import { VisualizaPage } from '../pages/dai/dai';
 import { ChatPage } from '../pages/chat/chat';
 import { IsfPage } from '../pages/isf/isf';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -60,7 +60,7 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    ModalContentPage
+    VisualizaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
@@ -86,14 +86,13 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    ModalContentPage
+    VisualizaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ProviderLogin,
     ProviderDados,
-    // SocketService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
