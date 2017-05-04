@@ -1,23 +1,22 @@
 import { Component, NgZone  } from '@angular/core';
 import { NavController, NavParams, Nav, ViewController } from 'ionic-angular';
-import { ProviderLogin } from '../../providers/provider-login';
-import { LoginPage } from '../login/login';
 import { NoticiasPage } from '../pages/noticias/noticias';
 import firebase from 'firebase';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Component({
-  template: 'dai-noticias.html'
+   templateUrl: 'dai-noticias.html',
 })
 
 export class VisualizaPage {
   noticias;
+  
   constructor(
-    private nav:NavController, 
-    private viewCtrl:ViewController,
     public params: NavParams) {
-      this.noticias = params.data.noticias;     
+      this.noticias = params.data.noticia;     
+      console.log('Entrou aqui2 ');
     }
+    
 }
 
 @Component({
@@ -49,7 +48,6 @@ export class VisualizaPage {
         </ion-card-content>
       </ion-card>
     </ion-content>
-
   `
 })
 
@@ -66,7 +64,6 @@ export class DaiPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
-    public providerLogin: ProviderLogin,
     public nav: Nav,
     public af: AngularFire) {
       this.noticias = af.database.list('noticias/');
@@ -78,13 +75,9 @@ export class DaiPage {
 
     }
 
-    abrirNoticiasPage(noticias) {
-      this.nav.push(noticias);
-    }
-
-    sair(){
-        this.providerLogin.sair();
-        this.nav.setRoot(LoginPage);
+    abrirNoticiasPage(noticia) {
+      console.log('Entrou aqui');
+      this.nav.push(VisualizaPage, {noticia});
     }
 }
 

@@ -2,13 +2,14 @@ import { Component, ViewChild, NgZone } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { TutorialPage } from '../pages/tutorial/tutorial';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomeSlidePage } from '../pages/home-slide/home-slide';
 import { ProgramasPage } from '../pages/programas/programas';
 import { ConveniosPage } from '../pages/convenios/convenios';
 import { SobreDaiPage } from '../pages/sobre-dai/sobre-dai';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { SairPage } from '../pages/sair/sair';
 // import { SocketService } from '../providers/socket-service';
 import firebase from 'firebase';
 
@@ -65,8 +66,10 @@ export class MyApp {
     this.pages = [
      { title: 'Programas', component: ProgramasPage },
      { title: 'Convênios', component: ConveniosPage},
+     { title: 'Como funciona', component: TutorialPage},
      { title: 'Perfil', component: PerfilPage},
-     { title: 'Sobre', component: SobreDaiPage}
+     { title: 'Sobre', component: SobreDaiPage},
+     { title: 'Sair', component: SairPage}
     ];
   }  
 

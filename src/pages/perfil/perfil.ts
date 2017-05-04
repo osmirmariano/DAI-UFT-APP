@@ -15,6 +15,10 @@ export class PerfilPage {
   constructor(public navCtrl: NavController, 
     public navParams: NavParams) {
       var user = firebase.auth().currentUser;
+      if(user.photoURL == null){
+        //
+      }
+
       if(user != null){
         console.log(user)
         this.nome = user.displayName;

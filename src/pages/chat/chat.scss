@@ -1,7 +1,11 @@
 page-chat {
-
+  
 }
 
+.chatImage{
+    background: url(../assets/img/homeSlide.png);
+  }
+  
 .chatText{
   white-space: normal;
   font-size: 1.1em !important;
@@ -21,7 +25,7 @@ page-chat {
 
 
 .balao{
-  background: #EEEEEE;
+  background: #BBDEFB;
   padding: 10px;
   position: relative;
   border-radius: 20px 20px 20px 0px;

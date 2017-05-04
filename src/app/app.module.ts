@@ -27,6 +27,8 @@ import { SobreDaiPage } from '../pages/sobre-dai/sobre-dai';
 import { SobrePage } from '../pages/sobre/sobre';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { NoticiasPage } from '../pages/noticias/noticias';
+import { TutorialPage } from '../pages/tutorial/tutorial';
+import { SairPage } from '../pages/sair/sair';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderDados } from '../providers/provider-dados';
@@ -60,7 +62,9 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    VisualizaPage
+    VisualizaPage,
+    TutorialPage,
+    SairPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
@@ -86,7 +90,9 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    VisualizaPage
+    VisualizaPage,
+    TutorialPage,
+    SairPage
   ],
   providers: [
     StatusBar,

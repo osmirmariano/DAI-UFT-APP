@@ -10,6 +10,7 @@ import firebase from 'firebase';
   templateUrl: 'chat.html'
 })
 export class ChatPage {
+  storage = firebase.storage();
   firelist: FirebaseListObservable<any>;
   chat: any;
   constructor(
@@ -30,7 +31,14 @@ export class ChatPage {
   }
   
   chatSend(va, vi) { //mengirim pesan chat
+    var storage = firebase.storage();
+    var storageRef = storage.ref();
+    var spaceRef = storageRef.child('gs://appdai-beta.appspot.com').child('avatar.png');
+
     var user = firebase.auth().currentUser;
+    if(user.photoURL == null)
+      console.log(user.photoURL);
+      //user.photoURL = 'media&token=e90955fd-386f-434e-a10c-6fb3ee91ec43';
     this.af.database.list('/chat').push({ // menambahkan data chat ke firebase
       uid: user.uid,
       img: user.photoURL,
@@ -40,6 +48,7 @@ export class ChatPage {
       negativtimestamp: -Date.now() //buat nanti ambil data yang terbaru
     })
     this.chat = '';
+
   }
 
   sair(){
