@@ -1,11 +1,12 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Notícias DAI-UFT
+      {{ noticia.titulo }}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    {{ noticia.titulo }}
+    <h2 class="tituloNoticia"> {{ noticia.titulo }} </h2>
+    <h4 class="descicaoNoticia">{{ noticia.descricao }}</h4>
 </ion-content>
