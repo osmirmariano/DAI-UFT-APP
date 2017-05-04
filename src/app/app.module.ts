@@ -10,7 +10,6 @@ import { AngularFireModule } from 'angularfire2';
 import firebase from 'firebase';
 /*Declarações de imports de paginas*/
 import { DaiPage } from '../pages/dai/dai';
-import { VisualizaPage } from '../pages/dai/dai';
 import { ChatPage } from '../pages/chat/chat';
 import { IsfPage } from '../pages/isf/isf';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -29,6 +28,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
 import { NoticiasPage } from '../pages/noticias/noticias';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SairPage } from '../pages/sair/sair';
+import { DaiNoticiasPage } from '../pages/dai/dai-noticias';
 /*Declarações de imports de providers*/
 import { ProviderLogin } from '../providers/provider-login';
 import { ProviderDados } from '../providers/provider-dados';
@@ -62,9 +62,9 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    VisualizaPage,
     TutorialPage,
-    SairPage
+    SairPage,
+    DaiNoticiasPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'}),
@@ -90,9 +90,9 @@ export const firebaseConfig = {
     SobrePage,
     PerfilPage,
     NoticiasPage,
-    VisualizaPage,
     TutorialPage,
-    SairPage
+    SairPage,
+    DaiNoticiasPage
   ],
   providers: [
     StatusBar,
