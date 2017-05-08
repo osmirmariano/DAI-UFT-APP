@@ -1,12 +1,19 @@
 page-dai-noticias{
     .tituloNoticia{
-        font-size: 1.5em;
+        font-size: 1.8em;
+        margin: 5%;margin: 5%;
         text-align: center;
         color: blue;
+        padding-bottom: 2%;
     }
 
     .descicaoNoticia{
-        font-size: 1.3em;
-
+        font-family: 'Roboto', sans-serif;
+		margin: 5%;
+		font-size: 1.2em;
+		text-indent: 1.5em;
+		text-align: justify;
+		line-height: 1.6em;
+        color: #757575;
     }
 }

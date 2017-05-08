@@ -8,6 +8,13 @@
 </ion-header>
 
 <ion-content>
+	<ion-slides pager class="slidesTops">
+	    <ion-slide *ngFor="let noticia of noticias | async">
+		    <h2 class="slide-title"> {{noticia.titulo}}</h2>
+		    <p> {{noticia.resumo}}</p>
+	    </ion-slide>
+  	</ion-slides>
+
 	<hr/>
 	<ion-card  class="text" *ngFor="let noticia of noticias | async" (click)="abrirNoticiasPage(noticia)">
 		<ion-card-content>
