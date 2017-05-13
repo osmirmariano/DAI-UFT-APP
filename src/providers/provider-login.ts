@@ -72,7 +72,6 @@ export class ProviderLogin {
 	}
 
 	recuperarSenha(credencial: Credencial){
-		var auth = firebase.auth;
 		firebase.auth().sendPasswordResetEmail(credencial.email)
 			.then(result => console.log(result))
 			.catch(error => console.log(error))

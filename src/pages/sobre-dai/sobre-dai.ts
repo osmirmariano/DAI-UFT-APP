@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, Platform } from 'ionic-angular';
 import { SobrePage } from '../sobre/sobre';
-import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-sobre-dai',

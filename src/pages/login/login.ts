@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, MenuController, LoadingController, AlertController  } from 'ionic-angular';
+import { NavController, MenuController, LoadingController, AlertController  } from 'ionic-angular';
 import { RegistrarPage } from '../registrar/registrar';
 import { Credencial } from '../../model/credencial';
 import { ProviderLogin } from '../../providers/provider-login';
 import { TabsPage } from '../tabs/tabs';
 import { LoginEmailPage } from '../login-email/login-email';
 
-import { Facebook } from 'ionic-native';
 
 
 @Component({

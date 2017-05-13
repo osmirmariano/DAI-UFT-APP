@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Nav } from 'ionic-angular';
-import { DaiPage } from './dai';
 
 @Component({
   selector: 'page-dai-noticias',

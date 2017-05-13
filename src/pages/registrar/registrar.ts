@@ -6,8 +6,6 @@ import { TabsPage } from '../tabs/tabs';
 import { LoginPage } from '../login/login';
 import firebase from 'firebase';
 
-import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
-
 @Component({
   selector: 'page-registrar',
   templateUrl: 'registrar.html'

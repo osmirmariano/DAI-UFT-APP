@@ -31,10 +31,7 @@ export class ChatPage {
   }
   
   chatSend(va, vi) { //mengirim pesan chat
-    var storage = firebase.storage();
-    var storageRef = storage.ref();
-    var spaceRef = storageRef.child('gs://appdai-beta.appspot.com').child('avatar.png');
-
+    
     var user = firebase.auth().currentUser;
     if(user.photoURL == null)
       console.log(user.photoURL);

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'page-programas',

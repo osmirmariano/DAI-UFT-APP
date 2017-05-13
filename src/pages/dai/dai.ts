@@ -1,6 +1,5 @@
-import { Component, NgZone  } from '@angular/core';
-import { NavController, NavParams, Nav, ViewController } from 'ionic-angular';
-import { NoticiasPage } from '../pages/noticias/noticias';
+import { Component } from '@angular/core';
+import { NavController, NavParams, Nav } from 'ionic-angular';
 import { DaiNoticiasPage } from './dai-noticias';
 import firebase from 'firebase';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';

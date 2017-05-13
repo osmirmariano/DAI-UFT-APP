@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, Platform, ModalController, ViewController  } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
-import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-convenios',
