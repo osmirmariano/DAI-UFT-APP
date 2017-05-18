@@ -1,14 +1,14 @@
 
-<ion-content no-padding>
+<ion-content no-padding class="fundoSair">
 
-  	<ion-card>
+  <ion-card class="cardEdit">
 		<ion-card-content>
 			<ion-card-title>
 				<p style="text-align: center;font-size: 20pt;color: gray;padding: 10px 0 0 0; font-weight: 900;">Deseja realmente sair?</p>
 			</ion-card-title>
       <ion-item>
-        <button ion-button (click)="sair()" item-left large>SIM</button>
-        <button ion-button (click)="naoSair()" item-right outline color="danger" large>NÃO</button>
+        <button ion-button (click)="sair()" item-left large>  SIM <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon></button>
+        <button ion-button (click)="naoSair()" item-right outline color="danger" large> NÃO <ion-icon ios="ios-close" md="md-close"></ion-icon></button>
       </ion-item>
 		</ion-card-content>
 	</ion-card>

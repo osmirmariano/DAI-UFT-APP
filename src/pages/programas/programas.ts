@@ -40,10 +40,7 @@ export class NavegacaoPage {
       <button ion-fab color="amarelo" mini><ion-icon name="add"></ion-icon></button>
         <ion-fab-list>
          <button ion-fab (click)="chamadaHome()">
-            <ion-icon name="md-home"></ion-icon>
-          </button>
-          <button ion-fab>
-            <ion-icon name="md-search"></ion-icon>
+            <ion-icon color="primary" name="md-home"></ion-icon>
           </button>
         </ion-fab-list>
   	</ion-fab>
@@ -60,14 +57,6 @@ export class ProgramasPage {
     public navCtrl: NavController) {
 
       this.items = [
-      {
-        'title': 'Ciência Sem Fronteiras',
-        imageTitulo: "assets/img/programa1.png",
-        'title2': 'Sobre o programa',
-        'description': 'Ciência sem Fronteiras é um programa que busca promover a consolidação, expansão e internacionalização da ciência e tecnologia, da inovação e da competitividade brasileira por meio do intercâmbio e da mobilidade internacional. A iniciativa é fruto de esforço conjunto dos Ministérios da Ciência, Tecnologia e Inovação (MCTI) e do Ministério da Educação (MEC), por meio de suas respectivas instituições de fomento – CNPq e Capes –, e Secretarias de Ensino Superior e de Ensino Tecnológico do MEC. ',
-        'descrition2': 'O projeto prevê a utilização de até 101 mil bolsas em quatro anos para promover intercâmbio, de forma que alunos de graduação e pós-graduação façam estágio no exterior com a finalidade de manter contato com sistemas educacionais competitivos em relação à tecnologia e inovação. Além disso, busca atrair pesquisadores do exterior que queiram se fixar no Brasil ou estabelecer parcerias com os pesquisadores brasileiros nas áreas prioritárias definidas no Programa, bem como criar oportunidade para que pesquisadores de empresas recebam treinamento especializado no exterior.',
-        'color': '#E63135'
-      },
       {
         'title': 'PEC-G',
         imageTitulo: "assets/img/programa2.png",
@@ -88,15 +77,15 @@ export class ProgramasPage {
         'title': 'Santander Universidades',
         imageTitulo: "assets/img/programa4.png",
         'title2': 'Sobre o programa',
-        'description': 'Sem descrição',
-        'descricao2': '',
+        'description': 'O Santander Universidades destaca-se por suas iniciativas como programas de bolsas, ciência e inovação, empreendedorismo, transferência tecnológica e apoio a projetos universitários. Dessa forma, contribuíndo com a internacionalização da atividade acadêmica e com a transferência de conhecimento do campus para a sociedade.',
+        'descricao2': ' O compromisso com a educação superior começa por dedicar uma atenção especial para o público que contribui com o futuro do País. É por isso que o Santander Universidades oferece benefícios para universitários, alunos, professores e funcionários das instituições de ensino superior.',
         'color': '#FFD439'
       },
       {
         'title': 'EBW++',
         imageTitulo: "assets/img/programa5.png",
         'title2': 'Sobre o programa',
-        'description': 'Sem descrição',
+        'description': 'O projeto EBW++ faz parte do Programa Erasmus Mundus. O projeto EBW++ é composto por 20 Instituições de Ensino Superior europeias parceiras e brasileiras e 12 instituições associadas.',
         'descricao2': '',
         'color': '#FFD439'
       },

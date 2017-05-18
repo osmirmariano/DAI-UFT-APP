@@ -52,14 +52,16 @@ export class ProviderLogin {
 
 	loginComGoogle(){
 		let provider = new firebase.auth.GoogleAuthProvider();
-		firebase.auth().signInWithPopup(provider)
+		firebase.auth().signInWithRedirect(provider)
 			.then(resultado => this.callbackSucessoLogin(resultado))
 			.catch(erro => this.callbackFalhaLogin(erro))
 	}
 
 	loginComFacebook(){
-		let provider = new firebase.auth.FacebookAuthProvider();
-		return firebase.auth().signInWithPopup(provider)
+		var provider = new firebase.auth.FacebookAuthProvider();
+
+		//return firebase.auth().signInWithPopup(provider)
+		return firebase.auth().signInWithRedirect(provider)
 			.then(resultado => this.callbackSucessoLogin(resultado))
 			.catch(erro => this.callbackFalhaLogin(erro))
 	}
@@ -90,7 +92,7 @@ export class ProviderLogin {
 	
 	private callbackFalhaLogin(erro){
 		let alert = this.alertCtrl.create({
-			title: 'Endereço de e-mail já existe ou e-mail e senha incorreta',
+			title: 'Por favor, verifice se seu endereço de e-mail é válido!',
 			buttons: ['OK']
 		});
 		alert.present();

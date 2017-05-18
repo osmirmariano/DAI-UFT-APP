@@ -16,7 +16,8 @@ export class PerfilPage {
     public navParams: NavParams) {
       var user = firebase.auth().currentUser;
       if(user.photoURL == null){
-        //
+        console.log(user.photoURL);
+        //user.photoURL = "gs://appdai-beta.appspot.com/avatar.png"
       }
 
       if(user != null){
